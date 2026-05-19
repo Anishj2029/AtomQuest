@@ -9,9 +9,9 @@ const start = async () => {
   await connectDB();
   await seedDemoDataIfEmpty();
 
-  const server = app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT} [${process.env.NODE_ENV}]`);
-  });
+ const server = app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT} [${process.env.NODE_ENV}]`);
+});
 
   const shutdown = (signal) => {
     console.log(`\n${signal} received. Shutting down gracefully...`);
