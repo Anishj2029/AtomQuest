@@ -42,6 +42,13 @@ app.get("/health", (req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "AtomQuest API is running 🚀",
+  });
+});
+
 // ─── API Routes ───────────────────────────────────────────────────────────────
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
